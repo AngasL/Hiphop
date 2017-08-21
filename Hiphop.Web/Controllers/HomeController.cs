@@ -5,14 +5,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Hiphop.Web.Models;
+using Hiphop.Services;
 
 namespace Hiphop.Web.Controllers
 {
     public class HomeController : Controller
     {
+		private readonly ITestService _service;
+
+		public HomeController(ITestService service)
+		{
+			_service = service;
+		}
+
         public IActionResult Index()
         {
-            return View();
+			var user = _service.GetUserById(1);
+
+			return View(user);
         }
 
         public IActionResult About()

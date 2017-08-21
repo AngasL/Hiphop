@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hiphop.Repository\Hiphop.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
