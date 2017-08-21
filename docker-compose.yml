@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  hiphop.web:
+    image: hiphop.web
+    build:
+      context: ./Hiphop.Web
+      dockerfile: Dockerfile
