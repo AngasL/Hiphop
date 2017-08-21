@@ -2,7 +2,7 @@
 
 namespace Hiphop.Services
 {
-    public class Class1
-    {
-    }
+	public class TestService : ITestService
+	{
+	}
 }

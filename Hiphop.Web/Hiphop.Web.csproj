@@ -13,4 +13,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hiphop.Repository\Hiphop.Repository.csproj" />
+    <ProjectReference Include="..\Hiphop.Services\Hiphop.Services.csproj" />
+  </ItemGroup>
+
 </Project>

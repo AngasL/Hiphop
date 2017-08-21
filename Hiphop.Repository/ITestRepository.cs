@@ -2,7 +2,7 @@
 
 namespace Hiphop.Repository
 {
-    public class Class1
+    public interface ITestRepository
     {
     }
 }
