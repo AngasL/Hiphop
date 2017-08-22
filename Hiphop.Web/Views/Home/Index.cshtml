@@ -1,7 +1,7 @@
 ﻿@model Hiphop.Repository.Model.User
 
 @{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
-
-<div id="userId">@Model.Name</div>
+@{var userName = Model == null ? "nothing return from database" : Model.Name;}
+<div id="userId">@userName</div>

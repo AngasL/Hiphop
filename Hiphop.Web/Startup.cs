@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,7 +23,7 @@ namespace Hiphop.Web
 			var connectionString = Configuration.GetConnectionString("Hiphop");
 
 			services.AddMvc();
-			services.AddDbContext<HiphopContext>(options => options.UseSqlServer(connectionString));
+			services.AddDbContext<HiphopContext>(options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Hiphop.Web")));
 			services.InjectRepositories();
 			services.InjectServices();
 
